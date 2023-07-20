@@ -103,11 +103,11 @@ if (row * col * page > 180)
     printColor("Трёхмерный массив не возможно заполнить не повторяющимися двухзначными числами, т.к. длина массива превышает возможное количество этих чисел\n", ConsoleColor.Red);
     return;
 }
-int [] arrayDoubleDigits = new int [row*col*page]; //создание одномерного массива с такой же длиной, как и у трёхмерного
+int[] arrayDoubleDigits = new int[row * col * page]; //создание одномерного массива с такой же длиной, как и у трёхмерного
 NonRepeatingValues(0, arrayDoubleDigits); //заполнение массива случайными двузначными числами, очень нагружает систему, но сама логика любопытная
 int[,,] array3DDoubleDigits = FillingArrayRandomTwoDigitNumbers(
                                                                 rowCount: row,
                                                                 colCount: col,
                                                                 pageCount: page,
                                                                 arrayDoubleDigits: arrayDoubleDigits);
-print3DArray(array3DDoubleDigits,"Вывод трёхмерного массива");
+print3DArray(array3DDoubleDigits, "Вывод трёхмерного массива");
